@@ -373,36 +373,6 @@ Repository assets may include:
 
 ---
 
-## Team
-
-### Rojen Wairokpam
-
-B.Tech, Computer Science and Engineering
-National Institute of Technology Manipur
-
-### Ningthem Longjam
-
-B.Tech, Electronics and Communication Engineering
-National Institute of Technology Manipur
-
-### Loukrakpam Suresh Singh
-
-B.Tech, Electronics and Communication Engineering
-National Institute of Technology Manipur
-
-### Rati Ranjan Mohanty
-
-B.Tech, Computer Science and Engineering
-National Institute of Technology Manipur
-
-### Khundrakpam Johnson Singh
-
-Assistant Professor
-Department of Computer Science and Engineering
-National Institute of Technology Manipur
-
----
-
 ## Repository Notice
 
 This repository serves as a public showcase of the DSGF-LEWS research, architecture, methodology, achievements, and system design.
