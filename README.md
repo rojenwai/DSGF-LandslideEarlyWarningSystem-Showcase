@@ -1,182 +1,258 @@
 # DSGF-LEWS
 
-## Dynamic Satellite-Ground Fusion Grid-Based Landslide Early Warning System
+## Dynamic Satellite–Ground Fusion Grid-Based Landslide Early Warning System
 
-**Two-Time Hackathon Winning Project**
-**Showcased at AI Summit**
-
-DSGF-LEWS (Dynamic Satellite-Ground Fusion Grid-Based Landslide Early Warning System) is a novel landslide monitoring and forecasting framework that combines satellite intelligence, adaptive IoT sensor deployment, LoRa communication, edge computing, and machine learning to provide scalable and cost-effective landslide early warning capabilities.
-
-The system addresses the limitations of traditional monitoring approaches by integrating large-scale satellite-based risk assessment with targeted ground sensor deployment, making it suitable for mountainous and low-connectivity regions.
+**Hybrid ML-Based Risk Prediction Using Satellite Intelligence and Adaptive IoT Monitoring**
 
 ---
 
-## Achievements
+### Highlights
 
-* Winner of Two Hackathons
-* Selected for Showcase at AI Summit
-* Developed by Students of National Institute of Technology Manipur
-* Designed for Real-World Disaster Management Applications
+* Hybrid ML-based landslide risk prediction
+* Satellite and IoT sensor data fusion
+* Geo-spatial grid-based monitoring architecture
+* Adaptive sensor deployment framework
+* LoRa-enabled edge communication network
+* Offline-first operation for remote mountainous regions
+
+### Recognition
+
+* Exhibited at AI Impact Summit India 2026
+* Runner-Up, TechSprint Manipur 1.0
+* First Runner-Up, ReGen Hackathon 2.0
+* Methodology under Patent Filing
+
+---
+
+## Overview
+
+DSGF-LEWS (Dynamic Satellite–Ground Fusion Grid-Based Landslide Early Warning System) is a novel landslide monitoring and forecasting framework that combines satellite intelligence, machine learning, adaptive IoT sensor deployment, LoRa communication, and edge computing to provide scalable, cost-effective, and reliable landslide early warning capabilities.
+
+Traditional landslide monitoring systems generally rely on either large-scale satellite observations or dense ground sensor deployments. Satellite-only approaches often lack real-time subsurface information, while extensive sensor deployments are expensive and difficult to maintain in mountainous terrain.
+
+DSGF-LEWS introduces a dual-stage risk assessment architecture that leverages the strengths of both approaches. The system first performs large-scale satellite-based risk screening and then selectively deploys ground monitoring resources only where elevated risk is detected.
+
+This significantly reduces infrastructure requirements while improving monitoring precision and operational scalability.
 
 ---
 
 ## Problem Statement
 
-Landslides continue to cause significant loss of life, infrastructure damage, and disruption of transportation networks in mountainous regions.
+Landslides continue to pose a major threat to human lives, transportation networks, public infrastructure, and economic activity in mountainous regions.
 
-Existing systems face several challenges:
+Common challenges faced by existing systems include:
 
-* High deployment costs due to dense sensor installations
-* Limited scalability across large geographical areas
-* Dependence on continuous internet connectivity
-* Insufficient real-time subsurface monitoring
-* Difficulty in identifying high-risk zones efficiently
+* High deployment and maintenance costs
+* Poor scalability across large terrains
+* Dependence on stable internet connectivity
+* Limited real-time monitoring capabilities
+* Inefficient allocation of sensing resources
+* Delayed warning generation
 
-DSGF-LEWS addresses these challenges through a multi-stage monitoring architecture.
-
----
-
-## Proposed Solution
-
-The framework divides mountainous terrain into geo-spatial grids and performs a two-stage risk assessment process.
-
-### Stage 1: Satellite-Based Risk Screening
-
-Satellite-derived environmental parameters are collected for each grid, including:
-
-* Rainfall
-* Vegetation Index (NDVI)
-* Slope
-* Elevation
-* Soil Moisture
-* Land Cover
-* Soil Type
-
-A machine learning model analyzes these parameters and classifies each grid according to risk level.
-
-Only grids identified as high-risk proceed to the next stage.
-
----
-
-### Stage 2: Adaptive Ground Sensor Monitoring
-
-Ground sensors are deployed only in high-risk grids.
-
-Each sensor node monitors:
-
-* Soil Moisture
-* Ground Vibration
-* Multi-Axis Tilt
-* Environmental Conditions
-
-Sensor density is determined dynamically based on:
-
-* Terrain complexity
-* Slope characteristics
-* Grid size
-* Infrastructure importance
-
-This significantly reduces deployment and maintenance costs compared to traditional systems.
+DSGF-LEWS was developed to address these challenges through intelligent risk prioritization and adaptive sensing.
 
 ---
 
 ## System Architecture
 
-### Geo-Spatial Grid Division
+The framework operates through a hierarchical two-stage architecture.
 
-The study area is divided into fixed-resolution grids to simplify monitoring, feature extraction, and machine learning analysis.
+### Stage 1: Satellite-Based Risk Screening
 
-Each grid is assigned a unique Grid ID (GID) for traceability.
+The target terrain is divided into geo-spatial grids.
 
-### LoRa Communication Network
+For every grid, environmental and geographical features are extracted from satellite and terrain datasets, including:
 
-Sensor nodes communicate with a Grid Gateway using LoRa technology.
+* Rainfall Intensity
+* Vegetation Index (NDVI)
+* Slope
+* Elevation
+* Soil Moisture
+* Soil Type
+* Land Cover
+* Terrain Characteristics
 
-Key advantages:
+These parameters are processed using a machine learning model that generates an initial risk score for each grid.
 
-* Long-range communication
-* Low power consumption
-* Reliable operation in mountainous terrain
-* Cost-effective deployment
+Outputs:
 
-### Grid Gateway
+* Low Risk
+* Moderate Risk
+* High Risk
 
-The Grid Gateway functions as an intelligent edge node responsible for:
+Only grids classified as elevated risk proceed to Stage 2.
 
-* Sensor communication
-* Data aggregation
-* Preliminary processing
-* Offline data storage
-* Risk inference
-* Alert generation
-
-### Offline-First Operation
-
-The system continues functioning even when internet connectivity is unavailable.
-
-Data is stored locally and synchronized once connectivity is restored.
+This approach enables large-scale monitoring without requiring physical sensors across the entire landscape.
 
 ---
 
-## Machine Learning Pipeline
+### Stage 2: Adaptive Ground Sensor Monitoring
 
-### Model 1: Satellite Risk Assessment
+Grids identified as high-risk receive targeted ground monitoring.
 
-Input Parameters:
+Each sensor node collects:
+
+* Soil Moisture Data
+* Ground Vibration Data
+* Multi-Axis Tilt Measurements
+* Environmental Parameters
+
+Unlike traditional deployments, sensor density is determined dynamically based on:
+
+* Terrain complexity
+* Slope characteristics
+* Grid size
+* Critical infrastructure presence
+
+This adaptive strategy significantly reduces deployment cost while preserving monitoring accuracy.
+
+---
+
+## Machine Learning Framework
+
+### Model 1: Satellite Intelligence Layer
+
+Inputs:
 
 * Rainfall
 * NDVI
-* Elevation
 * Slope
+* Elevation
 * Soil Moisture
 * Land Cover
 
-Output:
+Outputs:
 
-* Grid-Level Risk Score
+* Grid-Level Landslide Risk Score
 
-### Model 2: Ground Sensor Inference
+Purpose:
 
-Input Parameters:
+* Large-scale hazard screening
+* Risk hotspot identification
+* Resource prioritization
+
+---
+
+### Model 2: Ground Intelligence Layer
+
+Inputs:
 
 * Soil Moisture
-* Ground Vibration
+* Vibration
 * Tilt Measurements
 
-Output:
+Outputs:
 
 * Real-Time Ground Risk Score
 
-### Risk Fusion
+Purpose:
 
-The final risk score is generated by combining:
+* Detection of local instability
+* Monitoring of slope movement
+* Early identification of failure indicators
 
-* Satellite Risk Assessment
-* Ground Sensor Risk Assessment
+---
 
-This provides improved accuracy and reliability compared to single-source systems.
+### Risk Fusion Engine
+
+Both risk scores are combined to generate a final risk assessment.
+
+The fusion engine balances:
+
+* Macro-scale satellite observations
+* Micro-scale ground sensor intelligence
+
+This hybrid approach improves forecasting reliability and reduces false positives.
+
+---
+
+## Geo-Spatial Grid Architecture
+
+The entire study area is partitioned into fixed-resolution monitoring grids.
+
+Each grid is assigned a unique Grid ID (GID).
+
+Benefits include:
+
+* Simplified monitoring
+* Efficient data management
+* Scalable deployment
+* Geographic traceability
+* Consistent machine learning inputs
+
+This grid-based design enables monitoring of large mountainous regions while maintaining computational efficiency.
+
+---
+
+## LoRa Communication Network
+
+DSGF-LEWS utilizes a LoRa-based wireless communication infrastructure.
+
+Benefits:
+
+* Long-range communication
+* Low power consumption
+* Minimal operational cost
+* Reliable performance in rugged terrain
+* Suitable for remote deployments
+
+Sensor nodes communicate directly with a Grid Gateway responsible for local data aggregation and processing.
+
+---
+
+## Intelligent Grid Gateway
+
+Each monitored region contains a dedicated Grid Gateway.
+
+The gateway performs:
+
+* Sensor communication management
+* Data aggregation
+* Edge processing
+* Risk inference
+* Alert generation
+* Data synchronization
+
+The gateway serves as the local intelligence hub for each monitored grid.
+
+---
+
+## Offline-First Design
+
+Many landslide-prone regions experience intermittent internet connectivity.
+
+To address this challenge, DSGF-LEWS operates using an offline-first architecture.
+
+Capabilities include:
+
+* Local data storage
+* Edge inference
+* Local alert generation
+* Deferred cloud synchronization
+
+This ensures uninterrupted monitoring even during communication outages.
 
 ---
 
 ## Alert Generation Framework
 
-The system supports multiple warning levels:
+The system supports multiple alert levels.
 
 ### Advisory
 
-Early signs of instability detected.
+Early indications of slope instability.
 
 ### Warning
 
-Elevated probability of landslide occurrence.
+Elevated risk requiring increased monitoring.
 
 ### Immediate Evacuation Alert
 
-Critical risk requiring immediate action.
+Critical risk requiring urgent response.
 
 ### Progressive Instability Forecast
 
-Long-term slope instability prediction.
+Long-term prediction of developing slope failure.
 
 ---
 
@@ -187,31 +263,62 @@ Alerts can be delivered through:
 * SMS
 * Mobile Applications
 * Email
-* Web Dashboard
-* Authority Control Systems
+* Web Dashboards
+* Emergency Control Systems
 
 Notifications can be routed to:
 
-* District Administration
+* Local District Administration
 * Disaster Management Authorities
 * State Control Rooms
-* Local Village Authorities
+* Village Authorities
+* Infrastructure Operators
+
+This enables rapid and targeted emergency response.
 
 ---
 
-## Key Features
+## Key Innovations
 
-* Satellite-First Risk Screening
-* Adaptive Sensor Deployment
-* Dual-Stage Machine Learning
-* Multi-Sensor Data Fusion
-* LoRa-Based Communication
-* Edge Computing
-* Offline-First Architecture
-* Geo-Spatial Grid Analysis
-* Risk Escalation Framework
-* Authority-Specific Alert Routing
-* Unique Grid and Sensor Identification System
+### Satellite-First Risk Screening
+
+Large geographical areas can be monitored without extensive sensor deployment.
+
+### Adaptive Sensor Deployment
+
+Monitoring resources are allocated only where necessary.
+
+### Dual-Stage Machine Learning
+
+Two independent machine learning models improve prediction accuracy.
+
+### Multi-Sensor Fusion
+
+Combines environmental and physical indicators into a unified risk assessment.
+
+### LoRa-Based Communication
+
+Provides long-range connectivity suitable for mountainous terrain.
+
+### Edge Computing
+
+Enables local processing and rapid decision-making.
+
+### Offline Operation
+
+Maintains functionality without continuous internet access.
+
+### Grid-Level Intelligence
+
+Supports scalable monitoring across large regions.
+
+### Risk Escalation Framework
+
+Generates context-aware warning levels based on severity.
+
+### Traceability System
+
+Every sensor and grid is uniquely identifiable for monitoring and auditing purposes.
 
 ---
 
@@ -220,19 +327,21 @@ Notifications can be routed to:
 ### Software
 
 * Machine Learning
-* Remote Sensing
 * Geographic Information Systems (GIS)
-* IoT Data Processing
+* Remote Sensing
 * Edge Computing
+* Data Analytics
 * Dashboard Systems
+* Risk Modeling
 
 ### Hardware
 
 * ESP32
 * LoRa Modules
 * Soil Moisture Sensors
-* IMU/Tilt Sensors
+* IMU / Tilt Sensors
 * Vibration Sensors
+* Environmental Sensors
 * Solar Power Systems
 * Gateway Nodes
 
@@ -240,26 +349,27 @@ Notifications can be routed to:
 
 ## Applications
 
-* Landslide Monitoring
-* Railway Corridor Protection
+* Landslide Early Warning Systems
+* Railway Corridor Monitoring
 * Highway Safety Monitoring
-* Disaster Risk Reduction
 * Mountain Infrastructure Protection
 * Smart Environmental Monitoring
+* Disaster Risk Reduction
+* Remote Terrain Surveillance
 
 ---
 
 ## Project Gallery
 
-Include:
+Repository assets may include:
 
-* System Architecture Diagram
-* Dashboard Screenshots
-* Grid Division Visualizations
-* Sensor Deployment Models
-* Hackathon Presentation Photos
-* AI Summit Showcase Photos
+* System Architecture Diagrams
+* Monitoring Dashboards
+* Grid Visualization Models
+* Sensor Deployment Illustrations
 * Prototype Images
+* Hackathon Demonstrations
+* AI Summit Showcase Photographs
 
 ---
 
@@ -295,9 +405,9 @@ National Institute of Technology Manipur
 
 ## Repository Notice
 
-This repository is intended to showcase the architecture, research, methodology, and achievements of DSGF-LEWS.
+This repository serves as a public showcase of the DSGF-LEWS research, architecture, methodology, achievements, and system design.
 
-The source code is not publicly available due to ongoing research, development, and future deployment considerations.
+Source code and implementation details are not publicly available due to ongoing patent filing and intellectual property considerations.
 
 ---
 
@@ -305,10 +415,11 @@ The source code is not publicly available due to ongoing research, development, 
 
 * Real-World Field Deployment
 * Enhanced Machine Learning Models
+* Real-Time Satellite Data Integration
 * Drone-Assisted Monitoring
-* Real-Time Satellite Integration
-* Digital Twin Simulation
+* Predictive Digital Twin Systems
 * Government Disaster Management Integration
+* Multi-Hazard Risk Assessment Expansion
 
 ---
 
@@ -322,4 +433,4 @@ LinkedIn: https://www.linkedin.com/in/rojenwai
 
 ---
 
-DSGF-LEWS demonstrates how satellite intelligence, machine learning, and IoT systems can be combined to build scalable and cost-effective disaster early warning solutions for vulnerable mountainous regions.
+*DSGF-LEWS demonstrates how satellite intelligence, machine learning, edge computing, and IoT systems can be combined to build scalable and cost-effective disaster early warning solutions for vulnerable mountainous regions.*
