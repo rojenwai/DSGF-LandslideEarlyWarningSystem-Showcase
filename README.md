@@ -31,7 +31,7 @@
 ### Recognition
 
 * 🏆 Exhibited at AI Impact Summit India 2026
-* 🥈 Runner-Up, TechSprint Manipur 1.0
+* 🥈 First Runner-Up, TechSprint Manipur 1.0
 * 🥈 First Runner-Up, ReGen Hackathon 2.0
 
 ---
